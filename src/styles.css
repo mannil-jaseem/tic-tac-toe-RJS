@@ -71,6 +71,32 @@ body {
   width: 34px;
 }
 
+.square-elem {
+  background: #fff;
+  /* border: 1px solid #999; */
+  /* float: left; */
+  line-height: 34px;
+  height: 32px;
+  /* margin-right: -1px; */
+  /* margin-top: -1px; */
+  padding: 0;
+  text-align: center;
+  width: 32px;
+}
+
+.square-elem-winner {
+  background: #fff;
+  /* border: 1px solid #999; */
+  /* float: left; */
+  line-height: 34px;
+  height: 32px;
+  /* margin-right: -1px; */
+  margin-bottom: -10px;
+  padding: 0;
+  text-align: center;
+  width: 32px;
+}
+
 .board-row:after {
   clear: both;
   content: '';
