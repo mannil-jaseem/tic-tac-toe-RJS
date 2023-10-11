@@ -1,19 +1,5 @@
 import { useState } from "react";
 
-export default function Game() {
-  const [isValX, setIsValX] = useState(true)
-  const [squares, setSquares] = useState(Array(9).fill(null))
-  let current_square = squares[squares.length - 1]
-  function handlePlay(next_squares) {
-    setSquares([...quares, next_squares])
-    setIsValX(!isValX)
-  }
-  return <>
-    <div className="game">
-      <Board isValX={isValX} squares={current_square} onPlay={handlePlay} />
-    </div>
-  </>;
-}
 
 export function Board({ isValX, squares, onPlay }) {
   function handleClick(i) {
@@ -53,6 +39,21 @@ function Square({ val, onSquareClick }) {
     className="square"
     onClick={onSquareClick}
   >{val}</button>
+}
+
+export default function Game() {
+  const [isValX, setIsValX] = useState(true)
+  const [squares, setSquares] = useState(Array(9).fill(null))
+  let current_square = squares[squares.length - 1]
+  function handlePlay(next_squares) {
+    setSquares([...quares, next_squares])
+    setIsValX(!isValX)
+  }
+  return <>
+    <div className="game">
+      <Board isValX={isValX} squares={current_square} onPlay={handlePlay} />
+    </div>
+  </>;
 }
 
 function calculateWinner(squares) {
